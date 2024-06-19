@@ -21,6 +21,18 @@
     <main>
         <section class="characters">
             <h1>Personajes</h1>
+            <div class="filters">
+                <input type="text" id="searchInput" placeholder="Buscar por nombre...">
+                <select id="filterSelect">
+                    <option value="todos">Todos</option>
+                    <option value="Gryffindor">Gryffindor</option>
+                    <option value="Hufflepuff">Hufflepuff</option>
+                    <option value="Ravenclaw">Ravenclaw</option>
+                    <option value="Slytherin">Slytherin</option>
+                    <option value="alumno">Alumno</option>
+                    <option value="profesor">Profesor</option>
+                </select>
+            </div>
             <div class="grid">
                 <!-- Aquí se insertarán las tarjetas de los personajes dinámicamente -->
             </div>
@@ -30,6 +42,7 @@
     <footer>
         <p>&copy; 2024 Proyecto Harry Potter. Todos los derechos reservados.</p>
     </footer>
+    <script src="../fetch.js"></script>
 </body>
 
 </html>
