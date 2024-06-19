@@ -32,6 +32,19 @@ main {
     text-align: center;
 }
 
+main {
+    background-image: url(Assets/fondo.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.characters img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
 .intro {
     max-width: 800px;
     margin: 0 auto;
