@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const apiUrl = 'https://hp-api.onrender.com/api/characters';
     const grid = document.querySelector('.grid');
 
-    // Función para obtener y mostrar los personajes desde la API
     async function fetchCharacters() {
         try {
             const response = await fetch(apiUrl);
@@ -13,24 +12,19 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Función para renderizar los personajes en la grilla
     function renderCharacters(characters) {
         grid.innerHTML = '';
 
         characters.forEach(character => {
-
             const card = document.createElement('div');
             card.classList.add('card');
-
 
             const img = document.createElement('img');
             img.src = character.image;
             img.alt = character.name;
 
-
             const name = document.createElement('h1');
             name.textContent = character.name;
-
 
             const info = document.createElement('p');
             if (character.house) {
@@ -46,16 +40,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 info.textContent += `Patronus: ${character.patronus} `;
             }
 
-
             card.appendChild(img);
             card.appendChild(name);
             card.appendChild(info);
-
 
             grid.appendChild(card);
         });
     }
 
-    // Cargar los personajes al cargar la página
     fetchCharacters();
 });
