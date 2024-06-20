@@ -68,11 +68,13 @@ main {
     padding: 80px 40px;
     text-align: left;
     border: 2px black solid;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
 }
 
 .intro h1 {
     font-size: 4rem;
-    width: 600px;
     line-height: 5rem;
 }
 
@@ -121,7 +123,7 @@ main {
 }
 
 .casa {
-    width: 60%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     margin: 20px auto;
@@ -168,81 +170,6 @@ footer {
     bottom: 0;
 }
 
-/* diseño responsive */
-
-@media (max-width: 768px) {
-    .intro h1 {
-        font-size: 2rem;
-    }
-
-    .characters p {
-        font-size: 1rem;
-    }
-
-    .casa h2 {
-        font-size: 1.8rem;
-    }
-
-    .casa p {
-        font-size: 1rem;
-    }
-
-    .curiosidades h2 {
-        font-size: 1.8rem;
-    }
-
-    .curiosidades ul {
-        margin-left: 15px;
-    }
-
-    .curiosidades li {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .intro h1 {
-        font-size: 1.8rem;
-    }
-
-    .intro p {
-        font-size: 1rem;
-    }
-
-    .characters {
-        padding: 15px;
-    }
-
-    .characters p {
-        font-size: 0.9rem;
-    }
-
-    .casa h2 {
-        font-size: 1.5rem;
-    }
-
-    .casa p {
-        font-size: 0.9rem;
-    }
-
-    .curiosidades {
-        padding: 15px;
-    }
-
-    .curiosidades h2 {
-        font-size: 1.5rem;
-    }
-
-    .curiosidades ul {
-        margin-left: 10px;
-    }
-
-    .curiosidades li {
-        font-size: 0.9rem;
-    }
-}
-
-
 /*personajes pagina*/
 
 .characters2 h1 {
@@ -263,7 +190,6 @@ footer {
 .card {
     padding: 20px;
     text-align: center;
-    width: 60%;
     margin: auto;
 }
 
@@ -276,6 +202,7 @@ footer {
 .card li {
     font-size: 1.5rem;
     list-style: none;
+    font-weight: 200;
 }
 
 .card img {
@@ -283,4 +210,76 @@ footer {
     height: 200px;
     object-fit: cover;
     object-position: top;
+}
+
+/* diseño responsive */
+
+@media (max-width: 800px) {
+    .intro {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .intro h1 {
+        font-size: 4rem;
+        line-height: 5rem;
+        text-align: center;
+    }
+
+    .intro h1 span {
+        font-size: 7.3rem;
+    }
+
+    .intro p {
+        font-size: 1.8rem;
+        text-align: center;
+        width: 90%;
+    }
+}
+
+@media (max-width: 550px) {
+    .intro h1 {
+        font-size: 2.2rem;
+        line-height: 3rem;
+        text-align: center;
+    }
+
+    .intro h1 span {
+        font-size: 4rem;
+    }
+
+    .intro p {
+        font-size: 1.2rem;
+        text-align: center;
+        width: 80%;
+    }
+
+    .houses-names {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .curiosidades ul {
+        font-size: 1.2rem;
+        line-height: 2.1rem;
+    }
+
+    .characters h1,
+    .houses h1,
+    .curiosidades h1 {
+        font-size: 3.5rem;
+    }
+
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    .characters2 h1 {
+        padding: 30px 30px;
+        font-size: 3.5rem;
+    }
 }

@@ -36,27 +36,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (character.house) {
                 const houseItem = document.createElement('li');
-                houseItem.textContent = `Casa: ${character.house}`;
+                houseItem.innerHTML = `<strong>Casa:</strong> ${character.house}`;
                 info.appendChild(houseItem);
             }
 
             if (character.ancestry) {
                 const ancestryItem = document.createElement('li');
-                ancestryItem.textContent = `Ancestry: ${character.ancestry}`;
+                ancestryItem.innerHTML = `<strong>Ancestry:</strong> ${character.ancestry}`;
                 info.appendChild(ancestryItem);
             }
 
             if (character.wand) {
                 const wandItem = document.createElement('li');
-                const wandDetails = `Varita: Wood - ${character.wand.wood}, Core - ${character.wand.core}, Length - ${character.wand.length}"`;
-                wandItem.textContent = wandDetails;
+                const wandDetails = `<strong>Varita:</strong><br> <strong>Wood</strong> - ${character.wand.wood}<br> <strong>Core</strong> - ${character.wand.core}<br> <strong>Length</strong> - ${character.wand.length}"`;
+                wandItem.innerHTML = wandDetails;
                 info.appendChild(wandItem);
             }
 
 
             if (character.patronus) {
                 const patronusItem = document.createElement('li');
-                patronusItem.textContent = `Patronus: ${character.patronus}`;
+                patronusItem.innerHTML = `<strong>Patronus:</strong> ${character.patronus}`;
                 info.appendChild(patronusItem);
             }
 
