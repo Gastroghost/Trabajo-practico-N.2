@@ -1,15 +1,34 @@
 /* Estilos para el contenido principal */
-
-
 * {
     margin: 0;
     padding: 0;
+}
 
+:root {
+    --color-primary: black;
+    --color-secondary: white;
+    --fuente-primaria: "Bebas Neue", sans-serif;
+    --fuente-secundaria: "Montserrat", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+    font-family: var(--fuente-primaria);
+}
+
+p,
+li {
+    font-family: var(--fuente-secundaria);
 }
 
 header {
-    background-color: #343a40;
-    color: white;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
     padding: 1em 0;
 }
 
@@ -25,32 +44,30 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: var(--color-secondary);
     text-decoration: none;
 }
 
 main {
     padding: 20px;
-    background-image: url(Assets/fondo.webp);
+    background-image: url(Assets/fondo.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     min-height: 100vh;
-
 }
 
-.intro {
 
+.intro {
+    display: flex;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    text-align: center;
+    text-align: left;
 }
 
 .intro h1 {
     font-size: 2.5rem;
-    margin-bottom: 10px;
+    width: 60%;
 }
 
 .intro p {
