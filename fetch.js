@@ -29,22 +29,37 @@ document.addEventListener('DOMContentLoaded', function () {
             img.src = character.image;
             img.alt = character.name;
 
-            const name = document.createElement('h1');
+            const name = document.createElement('h2');
             name.textContent = character.name;
 
-            const info = document.createElement('p');
+            const info = document.createElement('ul');
+
             if (character.house) {
-                info.textContent += `Casa: ${character.house} `;
+                const houseItem = document.createElement('li');
+                houseItem.textContent = `Casa: ${character.house}`;
+                info.appendChild(houseItem);
             }
+
             if (character.ancestry) {
-                info.textContent += `Ancestry: ${character.ancestry} `;
+                const ancestryItem = document.createElement('li');
+                ancestryItem.textContent = `Ancestry: ${character.ancestry}`;
+                info.appendChild(ancestryItem);
             }
+
             if (character.wand) {
-                info.textContent += `Varita: ${character.wand} `;
+                const wandItem = document.createElement('li');
+                const wandDetails = `Varita: Wood - ${character.wand.wood}, Core - ${character.wand.core}, Length - ${character.wand.length}"`;
+                wandItem.textContent = wandDetails;
+                info.appendChild(wandItem);
             }
+
+
             if (character.patronus) {
-                info.textContent += `Patronus: ${character.patronus} `;
+                const patronusItem = document.createElement('li');
+                patronusItem.textContent = `Patronus: ${character.patronus}`;
+                info.appendChild(patronusItem);
             }
+
 
             card.appendChild(img);
             card.appendChild(name);
