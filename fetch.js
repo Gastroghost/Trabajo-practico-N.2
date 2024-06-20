@@ -2,16 +2,22 @@ document.addEventListener('DOMContentLoaded', function () {
     const apiUrl = 'https://hp-api.onrender.com/api/characters';
     const grid = document.querySelector('.grid');
 
+    // Función para obtener y mostrar los personajes desde la API
     async function fetchCharacters() {
         try {
             const response = await fetch(apiUrl);
             const characters = await response.json();
-            renderCharacters(characters);
+
+            // Filtrar personajes que tienen imagen
+            const charactersWithImage = characters.filter(character => character.image);
+
+            renderCharacters(charactersWithImage);
         } catch (error) {
             console.error('Error fetching characters:', error);
         }
     }
 
+    // Función para renderizar los personajes en la grilla
     function renderCharacters(characters) {
         grid.innerHTML = '';
 
@@ -48,5 +54,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // Cargar los personajes al cargar la página
     fetchCharacters();
 });
