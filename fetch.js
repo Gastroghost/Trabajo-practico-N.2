@@ -18,20 +18,20 @@ document.addEventListener('DOMContentLoaded', function () {
         grid.innerHTML = '';
 
         characters.forEach(character => {
-            // Crear elemento de tarjeta para cada personaje
+
             const card = document.createElement('div');
             card.classList.add('card');
 
-            // Imagen del personaje
+
             const img = document.createElement('img');
             img.src = character.image;
             img.alt = character.name;
 
-            // Nombre del personaje
+
             const name = document.createElement('h1');
             name.textContent = character.name;
 
-            // Información (house, ancestry, wand, patronus)
+
             const info = document.createElement('p');
             if (character.house) {
                 info.textContent += `Casa: ${character.house} `;
@@ -46,12 +46,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 info.textContent += `Patronus: ${character.patronus} `;
             }
 
-            // Agregar elementos a la tarjeta
+
             card.appendChild(img);
             card.appendChild(name);
             card.appendChild(info);
 
-            // Agregar tarjeta a la grilla
+
             grid.appendChild(card);
         });
     }

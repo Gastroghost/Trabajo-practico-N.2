@@ -231,7 +231,7 @@ footer {
 
 /* Estilos para las tarjetas de personajes */
 .card {
-    border: 1px solid #ccc;
+    border: 1px solid #0f0101e3;
     padding: 20px;
     text-align: center;
 }
@@ -239,18 +239,4 @@ footer {
 .card img {
     max-width: 100%;
     height: auto;
-}
-
-/* Estilos para los filtros */
-.filters {
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.filters input[type="text"],
-.filters select {
-    padding: 10px;
-    font-size: 16px;
 }
