@@ -5,10 +5,17 @@ document.addEventListener('DOMContentLoaded', function () {
     async function fetchCharacters() {
         try {
             const response = await fetch(apiUrl);
+
+            if (!response.ok) {
+                throw new Error('Failed to fetch characters');
+            }
+
             const characters = await response.json();
             renderCharacters(characters);
         } catch (error) {
             console.error('Error fetching characters:', error);
+            // Muestra un mensaje de error en la interfaz de usuario
+            grid.innerHTML = '<p>Error fetching characters. Please try again later.</p>';
         }
     }
 
